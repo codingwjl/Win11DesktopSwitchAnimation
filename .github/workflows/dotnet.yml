@@ -24,3 +24,4 @@ jobs:
       with:
         # Artifact name
         name: desktop_tools
+        path: ./artifact/package/
