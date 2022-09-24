@@ -19,10 +19,10 @@ jobs:
       run: dotnet restore Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.sln
     - name: Build
       run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release --no-restore
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v3.0.0
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
       with:
         # Artifact name
         name: desktop_tools
         # Destination path
-        path: ./
+        path: D:\a\Win11DesktopSwitchAnimation\Win11DesktopSwitchAnimation\Exelus.Win11DesktopSwitchAnimatior\Exelus.Win11DesktopSwitchAnimatior\bin\Release
