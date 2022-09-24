@@ -18,4 +18,9 @@ jobs:
     - name: Install dependencies
       run: dotnet restore Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.sln
     - name: Build
-      run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release
+      run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release --no-restore
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        # Artifact name
+        name: desktop_tools
