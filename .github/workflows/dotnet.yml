@@ -19,8 +19,14 @@ jobs:
       run: dotnet restore Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.sln
     - name: Build
       run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release --no-restore
-    - name: Zip the Build
-      run: zip -r ${{ secrets.ReleaseZipName }} ./AppName/bin/Release/netcoreapp3.1/ 
+
+    - name: Zip Release
+      uses: TheDoctor0/zip-release@0.6.2
+      with:
+        # Filename for archive
+        filename: release.zip
+        # Base path for archive files
+        path: D:\a\Win11DesktopSwitchAnimation\Win11DesktopSwitchAnimation\Exelus.Win11DesktopSwitchAnimatior\Exelus.Win11DesktopSwitchAnimatior\bin\Release
 
     - name: Create Release and Upload Release Asset
       uses: softprops/action-gh-release@v1
@@ -32,5 +38,5 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          ${{ secrets.ReleaseZipName }}.zip
+          release.zip
           LICENSE 
