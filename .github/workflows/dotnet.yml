@@ -18,4 +18,4 @@ jobs:
     - name: Install dependencies
       run: dotnet restore Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.sln
     - name: Build
-      run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release --no-restore
+      run: dotnet build Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior/Exelus.Win11DesktopSwitchAnimatior.csproj --configuration Release
